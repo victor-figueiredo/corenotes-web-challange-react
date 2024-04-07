@@ -1,0 +1,6 @@
+@import "../mixins";
+.creation-area {
+  width: 100%;
+  @include center;
+  margin-top: 30px;
+}
