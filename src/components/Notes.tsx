@@ -3,6 +3,7 @@ import "../styles/components/Notes.scss";
 import { useNotesContext } from "../context/notes";
 import Skeleton from "@mui/material/Skeleton";
 import Note from "./Note";
+import React from "react";
 
 export default function Notes() {
   const { favoriteNotes, otherNotes, isLoading } = useNotesContext();
@@ -40,7 +41,9 @@ export default function Notes() {
               <>{RenderLoading}</>
             ) : (
               favoriteNotes.map((note: any) => (
-                <Note key={note.id} note={note} />
+                <React.Fragment key={note.id}>
+                  <Note note={note} />
+                </React.Fragment>
               ))
             )}
           </div>

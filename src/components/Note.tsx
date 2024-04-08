@@ -8,11 +8,10 @@ import { useNotesContext } from "../context/notes";
 import ColorPalette from "./ColorPallete";
 
 type INoteComponent = {
-  key: number;
   note: INoteProps;
 };
 
-export default function Note({ note, key }: INoteComponent) {
+export default function Note({ note }: INoteComponent) {
   const {
     handleMarkAsFavorite,
     isEditing,
@@ -28,7 +27,7 @@ export default function Note({ note, key }: INoteComponent) {
 
   return (
     <div className="note-container">
-      <div className="note" key={key}>
+      <div className="note">
         <div
           className="title-and-favorite-button"
           style={{ backgroundColor: note.color }}
