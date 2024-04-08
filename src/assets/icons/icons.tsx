@@ -2,6 +2,8 @@ import React from "react";
 
 interface IconProps {
   className?: string;
+  enabled?: boolean;
+  onClick?: () => void;
 }
 
 export const LogoIcon: React.FC<IconProps> = ({ className }) => {
@@ -59,6 +61,28 @@ export const PainsIcon: React.FC<IconProps> = ({ className }) => {
       <path
         d="M7.56462 15.0439L2.73462 10H12.302L7.56462 15.0439Z"
         fill="#FFA000"
+      />
+    </svg>
+  );
+};
+
+export const StartIcon: React.FC<IconProps> = ({ enabled, onClick }) => {
+  return (
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+    >
+      <path
+        d="M8.08545 7.56521L2.93164 8.35812L7.49076 12.0253L6.30142 17.5755L10.4641 14.404L15.6179 17.5755L14.2304 12.0253L18.0957 8.35812L12.8428 7.56521L10.4641 2.41141L8.08545 7.56521Z"
+        fill={enabled ? "#FFA000" : "#FFF"}
+      />
+      <path
+        d="M10.5435 13.7726L6.90518 15.9691L7.86313 11.8277L4.65061 9.04093L8.88881 8.68291L10.5435 4.7737L12.1981 8.68291L16.4363 9.04093L13.2238 11.8277L14.1817 15.9691M20.2197 7.82172L13.2625 7.23147L10.5435 0.816101L7.82442 7.23147L0.867188 7.82172L6.14075 12.3986L4.56352 19.201L10.5435 15.5918L16.5234 19.201L14.9365 12.3986L20.2197 7.82172Z"
+        fill="#455A64"
       />
     </svg>
   );

@@ -1,6 +1,8 @@
-export type Note = {
+export type INote = {
+  id?: number;
   title?: string;
   content?: string;
   color?: string;
-  isFavorite?: boolean;
+  isFavorite?: string | boolean;
+  user_id?: string;
 };

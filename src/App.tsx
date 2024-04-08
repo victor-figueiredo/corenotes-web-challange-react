@@ -1,16 +1,16 @@
-import CreationArea from "./components/CreationArea";
-import Navbar from "./components/Navbar";
-import Notes from "./components/Notes";
-import "./styles/_main.scss";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/auth";
+import Routes from "./Routes";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Navbar />
-      <CreationArea />
-      <Notes />
-    </>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

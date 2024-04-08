@@ -1,7 +1,9 @@
 @import "../variables";
+@import "../breakpoints";
 
 .creation-inputs {
-  width: $component-width;
+  width: 100%;
+  margin: 0 10px;
   height: 103.36px;
   top: 81.81px;
   left: 443.3px;
@@ -40,6 +42,14 @@
       color: $color-secondary;
       width: 24px;
       height: 24px;
+      cursor: pointer;
+    }
+
+    button {
+      border: none;
+      background: none;
+      padding: 0;
+      margin: 0;
     }
   }
   & textarea {
@@ -67,5 +77,11 @@
     background-color: #d9d9d9;
     height: 1px;
     border: none;
+  }
+}
+
+@include small-screen {
+  .creation-inputs {
+    width: $component-width;
   }
 }
