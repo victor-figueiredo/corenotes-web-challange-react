@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+## CoreNotes Front-end Challange
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Consiste em um site responsivo e performático para gerenciamento de Notes(Anotações) do CoreNotes, desenvolvido utilizando React TS, Sass, Axios, gerencimaneto de estados com ContextAPI.
 
-Currently, two official plugins are available:
+Utilizando este site conectado a Api (<a href="https://github.com/victor-figueiredo/corenotes-api-challange-php">Link da Api</a>), o usuário poderá:
+2. Criar, listar(com filtros de título, conteúdo ou cor), atualizar, excluir e ordenar por favoritos.
+3. Marcar uma anotação como favorita.
+4. Definir uma cor para cada anotação.
+5. As anotações favoritas serão retornadas no topo da lista.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Passos para rodar este Front-end no seu computador
 
-## Expanding the ESLint configuration
+### Pré-requisitos
+- Node: ^16.15.0
+- NPM: ^8.5.5
+- Framework: React TS
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 1 - Clonando o repositório
+```bash
+git clone git@github.com:victor-figueiredo/corenotes-web-challange-react.git
+cd corenotes-web-challange-react
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 2 - Baixar e instalar as dependências
+```bash
+npm install
+```
+
+### 3 - Iniciar o servidor
+```bash
+npm run dev
+```
+
+### 4 - Rodando a api juntamente, você poderá usufruir dos recursos disponíveis na plataforma.
+<a href="https://github.com/victor-figueiredo/corenotes-api-challange-php">(Link da api)</a>
+Lá você terá o passo a passo para conectar a api na sua máquina.
+
+#### 👋 Eu, Victor Figueiredo, sou grato a Corelab pela oportunidade, conhecer um pouco desta empresa e poder participar deste processo é muito satisfatório.
