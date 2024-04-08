@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Api from "../../api/api";
 import { destroyToken, isAuthenticated, setToken } from "../../api/authCookies";
@@ -54,12 +54,22 @@ const AuthProvider = ({ children }: Props) => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    checkAuthentication();
+  }, []);
+
+  useEffect(() => {
+    if (loginError.error) {
+      setTimeout(() => {
+        setLoginError({ error: false, message: "" });
+      }, 3000);
+    }
+  }, [loginError.error]);
+
   const checkAuthentication = () => {
     const result = isAuthenticated();
     setAuthenticated(result);
-    if (result) {
-      navigate("/");
-    }
+    if (result) return navigate("/");
   };
 
   const handleLogin = async () => {

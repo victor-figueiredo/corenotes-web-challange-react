@@ -22,9 +22,8 @@ const PrivateRoutes = () => {
 const Routes = () => {
   return (
     <Router>
-      <Route path="*" element={<Login />} />
       <Route path="/login" element={<Login />} />
-      <Route element={<PrivateRoutes />}>
+      <Route path="/" element={<PrivateRoutes />}>
         <Route path="/" element={<Home />} />
       </Route>
     </Router>
