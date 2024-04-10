@@ -7,7 +7,6 @@ const access_token = Cookies.get("token");
 
 const httpClient = axios.create({
   baseURL: BASEURL,
-  timeout: 5000,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
